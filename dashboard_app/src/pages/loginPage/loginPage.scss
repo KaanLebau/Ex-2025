@@ -1,0 +1,80 @@
+/** @format */
+
+@import "../../styles/variables";
+
+.loginPageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  height: 100vh;
+
+  .loginPageTitle {
+    text-align: center;
+  }
+
+  .loginForm {
+    background-color: $primary-card-background;
+    border: 0.1em solid $scania-blue;
+    border-radius: 1em;
+    min-width: 400px;
+    padding: 2em;
+
+    .formDiv {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .formRow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1em;
+        padding: 0.5em;
+        width: inherit;
+        label {
+          color: $primary-text;
+          flex: 1;
+          font-weight: bold;
+          text-align: left;
+        }
+
+        input {
+          color: $primary-text;
+          flex: 2;
+          background-color: lighten($primary-card-background, 10%);
+          padding: 0.5em;
+          border: 1px, 1px, 0px, 0px solid $scania-blue;
+          border-radius: 5px;
+          width: 100%;
+        }
+      }
+
+      .errorMessage {
+        font-weight: bold;
+        color: $scania-red;
+        padding: 0.5em;
+        border: 1px solid $scania-red;
+        background-color: $secondary-background-color;
+        border-radius: 0.5em;
+      }
+      .loginPageSubmit {
+        margin-top: 1em;
+        padding: 0.5em 1em;
+        border: 2px solid black; // ✅ Added border
+        background-color: $scania-blue;
+        color: $scania-white;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: $scania-white;
+          color: $scania-blue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+
+.stopClassificationContainer {
+    background-color: $primary-background-color;
+    height: inherit;
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $scania-blue;
+    padding: 0.2rem;
+    overflow: hidden;
+    border-radius: 1em;
+}
+
+.stopClassificationTitle {
+    font-size: 1rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.pieChartWrapper {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+    :root {
+        --pie-color-1: #00C49F;
+        --pie-color-2: #ff2828;
+        --pie-border-color: $scania-blue;
+        --pie-border-width: 1px;
+        --pie-inner-radius: 30px;
+        --pie-outer-radius: 30px;
+        --pie-label-size: 14px;
+        --pie-label-color: $primary-text;
+    }

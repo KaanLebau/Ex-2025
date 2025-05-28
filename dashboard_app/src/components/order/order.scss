@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+.orderContainer{
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-background-color;
+    padding: 1em;
+    border-radius: 1em;
+    border: 1px solid $scania-blue;
+    gap: 0.3em;
+    .currentOrder{
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+        font-weight: bolder;
+        color: $primary-text;
+        border-bottom: 1px solid $scania-blue;
+        padding-bottom: 0.5em;
+        label {
+            padding-right: 0.5em;
+        }
+    }
+    .nextOrder{
+        font-size: 1em;
+        color: $secondary-text;
+        font-weight: bold;
+    }
+    hr {
+    color: $scania-blue;
+    }
+
+}

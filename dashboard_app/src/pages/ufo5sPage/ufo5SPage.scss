@@ -1,0 +1,96 @@
+/** @format */
+
+@import "../../styles/variables";
+
+.ufo5sPageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+
+  .tableTitle {
+    margin-bottom: 1em;
+    margin-top: 1em;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: $scania-blue;
+  }
+
+  .ufoTaskTable {
+    width: 100%;
+
+    border: 1px solid $scania-blue;
+    border-radius: 2em;
+    overflow: hidden; // Ensures rounded corners are applied
+
+    thead {
+      background-color: #f4f4f4;
+
+      tr {
+        th {
+          padding: 10px;
+          text-align: center;
+          border-bottom: 2px solid #ddd;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+
+        &:hover {
+          background-color: #e6e6e6;
+        }
+
+        td {
+          padding: 10px;
+          text-align: center;
+          border-bottom: 1px solid #ddd;
+
+          input[type="checkbox"] {
+            transform: scale(1.2);
+            cursor: pointer;
+          }
+
+          select {
+            padding: 5px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            background-color: white;
+            cursor: pointer;
+
+            &:focus {
+              border-color: $scania-blue;
+              outline: none;
+            }
+          }
+
+          a {
+            text-decoration: none;
+            color: $scania-blue;
+            font-weight: bold;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+      .checked-row {
+        background-color: #b8ccb8; // Light green background for checked rows
+      }
+
+      .green-row {
+        background-color: #b3ffb3 !important; // ✅ Green row if select is "ok" or "fylld"
+      }
+
+      .red-row {
+        background-color: #ffcccc !important; // ✅ Red row otherwise
+      }
+    }
+  }
+}

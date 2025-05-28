@@ -1,0 +1,141 @@
+/** @format */
+
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.handoverContainer {
+  width: 100%;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .handoverTitle {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .handoverContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 2em;
+
+    .machineStatusForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 90%;
+      height: 100%;
+      max-width: 3000px;
+      min-width: 800px;
+      border: 1px solid $scania-blue;
+      border-radius: 0.5em;
+      padding: 1em;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+      gap: 1em;
+      background-color: $secondary-background-color;
+      @include primary-shadow-effect;
+
+      &.ok-selected {
+        background-color: #c8dbc8;
+      }
+
+      &.nok-selected {
+        background-color: #dbc8c8;
+      }
+
+      .handoverHead {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        gap: 10em;
+
+        .machineInfo {
+          width: 100%;
+          max-width: fit-content;
+
+          .machineName {
+            font-weight: bold;
+            font-size: x-large;
+            margin: 0.3em;
+          }
+          .machineId {
+            font-weight: bold;
+            margin: 0.3em;
+          }
+        }
+
+        .machineState {
+          max-width: fit-content;
+          label {
+            margin: 0.3em;
+            font-weight: bold;
+          }
+          select {
+            margin: 0.3em;
+            border-radius: 0.5em;
+            width: 90%;
+            padding: 0.5em;
+            @include primary-shadow-effect;
+          }
+        }
+      }
+      .machineHandoverInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 0.3em;
+
+        label {
+          font-weight: bold;
+        }
+        input {
+          min-height: 100px;
+          width: 100%;
+          max-width: 98%;
+          border-radius: 0.5em;
+          padding: 0.5em;
+          text-align: left;
+          vertical-align: top;
+          resize: none;
+          @include primary-shadow-effect;
+        }
+      }
+
+      .error {
+        color: red;
+        font-size: 0.8em;
+      }
+    }
+    .virtualKeyboardPlaceholder {
+      width: 100%;
+      height: 150px;
+      background-color: #f2f2f2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0.5em;
+      color: gray;
+    }
+
+    /* Submit Button */
+    .submitButton {
+      background-color: $scania-blue;
+      color: white;
+      padding: 0.5em 1.5em;
+      border-radius: 0.5em;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: darken($scania-blue, 10%);
+      }
+    }
+  }
+}

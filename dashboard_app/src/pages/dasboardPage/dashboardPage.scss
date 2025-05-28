@@ -1,0 +1,35 @@
+
+@import '../../styles/variables';
+
+.dashboardPageContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+   
+    
+    .dashboardHead {
+        height: 10vh; /* Adjust header height as needed */
+        min-height: 50px;
+        background-color: $primary-background-color; /* Set a background */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 2px solid $scania-blue;
+    }
+    .dashboardLowerBody {
+        display: flex;
+        flex: 1;  
+        overflow: hidden; 
+
+
+        .dashboardBody {
+            flex: 1; 
+            overflow-y: auto; 
+            padding: 1.5em;
+            display: flex;
+            align-items:flex-start;
+            justify-content: center;
+        }
+    }
+}

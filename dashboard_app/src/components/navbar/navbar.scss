@@ -1,0 +1,109 @@
+@import '../../styles/variables';
+
+.navbarContainer{
+    background-color: $primary-card-background;
+    display: flex;
+    gap: 1em;
+    padding: 0.2em;
+    justify-content: flex-start;
+    padding-left: 5em;
+    .lineButton{
+        padding: 0.2em;
+        color: $primary-text;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 5px;
+        .lineList{
+            border-radius: 5px;
+            font-weight: normal;
+            display: flex;
+            gap: 0.2em;
+            position: absolute; // Keeps it from pushing other elements
+            top: 100%; // Places it directly below the button
+            left: 0;
+            color: $scania-blue;
+            background-color: $scania-white;
+            border: 1px solid black;
+            width: max-content;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+           .theLine{
+            padding: 0.2em;
+            &:hover{
+                border: 1px solid $scania-white;
+                background-color: $scania-blue;
+                color:$scania-white;
+                cursor: pointer;
+                font-weight: bold;
+            }
+           }
+        }
+
+        &:hover{
+            background-color: $scania-blue;
+            color:$scania-white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+    }
+
+    .dashboardLink{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.2em;
+        border-radius: 5px;
+        &:hover{
+            border: 1px solid $scania-white;
+            background-color: $scania-blue;
+            color: $scania-white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+    .machineLink{
+        padding: 0.2em;
+        color: $primary-text;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        border-radius: 5px;
+        .machineList{
+            border-radius: 5px;
+            font-weight: normal;
+            display: flex;
+            gap: 0.2em;
+            position: absolute; // Keeps it from pushing other elements
+            top: 100%; // Places it directly below the button
+            left: 0;
+            color: $scania-blue;
+            background-color: $scania-white;
+            border: 1px solid black;
+            width: max-content;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            .theMachine{
+                padding: 0.2em;
+                &:hover{
+                    border: 1px solid $scania-white;
+                    background-color: $scania-blue;
+                    color:$scania-white;
+                    cursor: pointer;
+                    font-weight: bold;
+                }
+            }
+            }
+        &:hover{
+            border: 1px solid $scania-white;
+            background-color: $scania-blue;
+            color: $scania-white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+   
+}

@@ -1,0 +1,19 @@
+# @format
+
+version: "3.8"
+
+services:
+  frontend:
+    container_name: dashboard_app
+    build: .
+    ports:
+      - "5173:5173" # Expose Vite's development server
+    volumes:
+      - .:/dashboard_app # Syncs files
+      - /dashboard_app/node_modules # Prevents overwriting node_modules
+    working_dir: /dashboard_app
+    command: ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+    tty: true

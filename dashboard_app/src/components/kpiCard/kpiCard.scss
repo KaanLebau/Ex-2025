@@ -1,0 +1,52 @@
+/** @format */
+
+@use "sass:color";
+@import "../../styles/mixins";
+@import "../../styles/variables";
+
+.kpiCardContainer {
+  border: 1px solid darkcyan;
+  padding: 0.3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.3em;
+  border-radius: 0.5em;
+  @include primary-shadow-effect;
+
+  &.red {
+    background-color: color.mix(
+      $secondary-background-color,
+      red,
+      60%
+    ); // 🔴 Blends 60% green + 40% red
+  }
+
+  &.yellow {
+    background-color: color.mix(
+      $secondary-background-color,
+      yellow,
+      60%
+    ); // 🟡 Blends 60% green + 40% yellow
+  }
+
+  &.green {
+    background-color: color.mix(
+      $secondary-background-color,
+      lightgreen,
+      80%
+    ); // 🟢 Blends 80% green + 20% light green
+  }
+
+  .kpiTarget {
+    flex: 1;
+    font-size: medium; // Adjust dynamically
+    font-weight: bold;
+  }
+  .lastValue {
+    flex: 3;
+    font-size: 3rem;
+    font-weight: bold;
+  }
+}

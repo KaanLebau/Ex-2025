@@ -1,0 +1,7 @@
+/** @format */
+
+@mixin primary-shadow-effect {
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2),
+    inset 4px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}

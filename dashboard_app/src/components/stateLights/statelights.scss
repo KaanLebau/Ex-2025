@@ -1,0 +1,59 @@
+/** @format */
+
+.stateLightsContainer {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: auto;
+  gap: 0.5vh;
+  border: 1px solid darkblue;
+
+  .theLight {
+    border: 1px solid #041e42;
+    height: 1vw;
+    width: 1vw;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+  }
+  .whiteOn {
+    background-color: white;
+    border: 2px solid #041e42;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+  }
+  .greenOn {
+    background-color: greenyellow;
+    border: 2px solid #041e42;
+    box-shadow: 0 0 25px rgba(172, 255, 47, 0.9);
+  }
+  .yellowOn {
+    background-color: yellow;
+    border: 2px solid #041e42;
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.9);
+  }
+  .redOn {
+    background-color: red;
+    border: 2px solid #041e42;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+  }
+
+  .whiteOff {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  .greenOff {
+    background-color: rgba(172, 255, 47, 0.3);
+  }
+  .yellowOff {
+    background-color: rgba(255, 255, 0, 0.3);
+  }
+  .redOff {
+    background-color: rgba(255, 0, 0, 0.3);
+  }
+}

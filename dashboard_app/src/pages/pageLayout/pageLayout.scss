@@ -1,0 +1,80 @@
+/** @format */
+
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.pageLayoutContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full height */
+  width: 100vw; /* Full width */
+
+  .pageLayoutHead {
+    height: 25vh;
+    min-height: 150px;
+    max-height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .pageLayoutLowerBody {
+    display: flex;
+    width: 100%;
+    flex: 1;
+    .sideBarContainer {
+      flex: 0 0 250px;
+      height: 100%;
+      width: 900px;
+      max-width: max-content;
+      background-color: $primary-card-background;
+      border-right: 2px solid $scania-blue;
+      overflow-y: auto;
+    }
+
+    .pageLayoutBody {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      background-color: white;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding: 0;
+      margin: 0;
+
+      .pageLayputMachineSelector {
+        background-color: $primary-card-background;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: max-height 1s ease-in-out, opacity 1s ease-in-out,
+          transform 1s ease-in-out;
+        &.visible {
+          max-height: 200px; // Adjust based on your design
+          opacity: 1;
+          transition: max-height 1s ease-in-out, opacity 1s ease-in-out,
+            transform 1s ease-in-out;
+          transform: translateY(0);
+        }
+      }
+      .outletContainer {
+        flex: 1;
+        width: 100%;
+
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+    }
+  }
+}

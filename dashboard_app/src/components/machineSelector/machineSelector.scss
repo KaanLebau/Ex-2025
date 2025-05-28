@@ -1,0 +1,83 @@
+/** @format */
+
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.machineSelectorContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  width: 100%;
+
+  .machineSelectorContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+    padding: 0.3em;
+  }
+
+  /* Machines on the left */
+  .machineList {
+    display: flex;
+    gap: 0.5em;
+    width: 90%;
+  }
+
+  .machineButton {
+    background-color: $secondary-background-color;
+    padding: 0.8em;
+    border: 1px solid $scania-blue;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    width: 100%;
+
+    &:hover {
+      background-color: $scania-blue;
+      color: $scania-white;
+      font-weight: bold;
+    }
+  }
+
+  .machineButton.active {
+    background-color: $scania-blue;
+    color: $scania-white;
+    font-weight: bold;
+  }
+
+  /* Options below */
+  .machineOptions {
+    flex-grow: 1;
+    min-width: 300px;
+
+    .optionList {
+      display: flex;
+      gap: 0.5em;
+    }
+
+    .optionButton {
+      background-color: $primary-background-color;
+      border: 1px solid $scania-blue;
+      padding: 0.5em 1em;
+      border-radius: 5px;
+      font-size: 0.9em;
+      cursor: pointer;
+      transition: 0.3s;
+
+      &:hover {
+        background-color: $scania-blue;
+        color: $scania-white;
+        font-weight: bold;
+      }
+    }
+
+    .optionButton.selected {
+      background-color: $scania-blue;
+      color: $scania-white;
+      font-weight: bold;
+    }
+  }
+}

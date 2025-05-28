@@ -1,0 +1,28 @@
+{
+    "line":"ham",
+    "CNC machines":[
+        {"SV90341":"DOOSAN"},
+        {"SV39933":"DMG"},
+        {"SV93326":"UNIOR"},
+        {"SV93328":"WMZ"},
+        {"SV93325":"LIEBHERR"},
+        {"SV90345":"LIL-DOOSAN"},
+        {"SV90306":"GUDEL 1"},
+        {"SV90307":"GUDEL 2"}
+    ],
+    "Utility machines":[
+        {"SV90306":"INBANA"},
+        {"SV90905":"LYFTBORD"},
+        {"SV90906":"LYFTBORD"},
+        {"SV90929":"LYFTVERKTYG"},
+        {"SV93328":"WMZ"}
+    ],
+
+    "order":{"No":"3175075-18",
+            "size":405,
+            "left":139,
+            "next":"3175075-19"
+            }
+
+
+}

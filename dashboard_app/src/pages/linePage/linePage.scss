@@ -1,0 +1,89 @@
+/** @format */
+
+@import "../../styles/variables";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.linePageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 1em;
+
+  @mixin level-style {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    min-height: 3em;
+  }
+
+  @mixin list-style {
+    background-color: $primary-card-background;
+    padding: 0.2em;
+    border: 1px solid $scania-blue;
+    border-radius: 0.5em;
+    color: $primary-text;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    //transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    &:hover {
+      background-color: $scania-blue;
+      color: $scania-white;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+  }
+  @mixin selected-style {
+    background-color: $scania-blue;
+    padding: 0.2em;
+    border: 2px solid $primary-text;
+    border-radius: 0.5em;
+    color: $scania-white;
+    text-align: center;
+    animation: fadeIn 0.3s ease-in-out;
+    //transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    &:hover {
+      background-color: $primary-card-background;
+      color: $primary-text;
+      transform: scale(1.05);
+      cursor: pointer;
+    }
+  }
+
+  .departmentLevel,
+  .tempoLevel,
+  .lineLevel {
+    @include level-style;
+  }
+  .departmentList,
+  .tempoList,
+  .lineList {
+    @include list-style;
+  }
+
+  .selectedDepartment,
+  .selectedTempo,
+  .selectedLine,
+  .selectedPRU,
+  .dashbordLink {
+    @include selected-style;
+  }
+
+  .dashboardLink {
+    margin-top: 3em;
+    padding: 1em;
+    font-size: large;
+    font-weight: bold;
+  }
+}

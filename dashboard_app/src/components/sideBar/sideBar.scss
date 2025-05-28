@@ -1,0 +1,46 @@
+/** @format */
+
+@import "../../styles/variables";
+
+.sideBarContainer {
+  width: 70%;
+  padding: 1em;
+  height: 100%;
+  background-color: brown;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    margin-bottom: 0.5em;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .sideBarItem {
+    background: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: left;
+    transition: background-color 0.3s ease-in-out;
+    color: $primary-text;
+    padding: 0.5em;
+    border-radius: 0.5em;
+
+    &:hover {
+      background-color: $scania-blue;
+      color: $scania-white;
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+    }
+  }
+  .active {
+    background-color: rgba($scania-blue, 70%);
+    color: white;
+    font-weight: bold;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+}

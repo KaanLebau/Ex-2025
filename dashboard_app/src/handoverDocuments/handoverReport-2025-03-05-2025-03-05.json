@@ -1,0 +1,31 @@
+{
+  "SV90341": {
+    "status": "ok"
+  },
+  "SV39933": {
+    "status": "nok",
+    "comment": "skärbortt "
+  },
+  "SV93326": {
+    "status": "ok"
+  },
+  "SV93328": {
+    "status": "ok",
+    "comment": "verktygshållare har vi bytt"
+  },
+  "SV93325": {
+    "status": "ok",
+    "comment": "kvaliten ostabil"
+  },
+  "SV90345": {
+    "status": "ok"
+  },
+  "SV90306": {
+    "status": "ok"
+  },
+  "SV90307": {
+    "status": "ok"
+  },
+  "date": "2025-03-05",
+  "clock": "2025-03-05"
+}

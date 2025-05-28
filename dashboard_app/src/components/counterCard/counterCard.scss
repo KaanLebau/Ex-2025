@@ -1,0 +1,33 @@
+/** @format */
+
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.counterCardContainer {
+  height: 100%;
+  border: 1px solid $scania-blue;
+  flex: 1;
+  background-color: $primary-background-color;
+  padding: 0.4em;
+  max-width: 180px;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  @include primary-shadow-effect;
+  .counterCardTitle {
+    font-size: clamp(0.8rem, 1em, 1.5rem);
+    font-weight: bold;
+  }
+  .counterCardValue {
+    flex-grow: 1; /* Allows this to take remaining space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(1em, 7vw, 3em); /* Dynamically scale text size */
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+  }
+}
