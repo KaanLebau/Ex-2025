@@ -31,8 +31,8 @@ This repository contains the code for my 2025 bachelor’s thesis, which focuses
         - `styles/`       – CSS and styling utilities 
         - `util/`         – Helper functions and utilities for formatting, validation, etc. 
 - 📂 `machinelearning/`  
-  - 📂 `models/`          – Implementations of TCN, LSTM, and CNN  
-  - 📂 `evaluation/`      – Metrics, plots, result storage  
+  (- 📂 `models/`          – Implementations of TCN, LSTM, and CNN ) 
+  (- 📂 `evaluation/`      – Metrics, plots, result storage)  
   - 📄 `model_factory.py` – Training and evaluation pipeline  
 ```
 
