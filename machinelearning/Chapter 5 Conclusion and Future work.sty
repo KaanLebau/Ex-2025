@@ -1,0 +1,79 @@
+Chapter 5 Conclusion and Future work
+
+Chapter 5 summarizes the main findings of the study, reflects on its limitations,
+and discusses directions for future work. Section 5.2 highlights the challenges
+posed by data sparsity and limited signal availability. Section 5.3 outlines
+possible extensions to the modeling approach, including architecture-specific
+improvements and alternative machine learning paradigms.
+
+5.1 Conclusion
+
+In summary, model performance was highly dependent on both task frequency
+and machine position in the production line. No architecture outperformed
+the others consistently across all metrics or machines. CNN demonstrated
+high precision and recall but struggled with over-prediction. LSTM showed
+strength in modeling long-range dependencies, particularly on later-stage
+machines. TCN, while consistent, lacked the adaptability observed in the other
+two models.
+
+Continuous learning results suggest that model performance can improve
+with more data, but the effect is constrained by data sparsity and task
+imbalance. These findings reinforce the importance of not only architectural
+choices but also dataset design and task framing in industrial machine learning
+applications.
+
+5.2 Limitations and Implications
+
+Despite the insights gained, this study has several limitations. Prediction
+performance, particularly on the final MC, was low in absolute terms, with
+Conclusion and Future work | 49
+some models failing to produce any correct predictions for certain tasks. This
+highlights the difficulty of modeling MC behavior under data imbalance and
+limited tracked signals.
+
+Furthermore, all data in this study was generated through simulation, using
+real-world configuration parameters collected through time studies of different
+operator tasks. However, simulations do not capture the uncertainty and
+variability present in real-world production environments, as discussed in ??.
+
+The simulated signals were designed to reflect the limited set of signals that
+are actually tracked in the production environment. In the real system, the only
+available automation signal is the part number, which remains constant during
+production and only changes when the product type changes. This results in
+zero information entropy, as calculated using eq. (2.12), and does not provide
+any meaningful input for learning time-dependent production behavior.
+
+Despite this, the automation system plays a critical role in coordinating
+the production flow and linking the behavior of different MCs, as described in
+Section 3.1.2. The absence of richer automation signals therefore constrains
+the model’s ability to capture MC to MC dependencies within the production
+line.
+
+These constraints underscore the need for more adaptable model
+architectures and domain-aware input features. In particular, addressing signal
+limitations and MC-specific behavior requires models that are better aligned
+with the structure and complexity of the production environment. These
+challenges open several promising directions discussed in section 5.3.
+
+5.3 Future work
+
+The applied ML approach can be extended from a single-model to a multi-
+model system to improve prediction performance. One approach is to split
+the problem by task type, using separate, specialized models for different
+operator tasks such as quality checks or tool replacements. Alternatively,
+the problem can be approached by treating each MC as an individual unit,
+training a dedicated model for its specific operator interactions. This allows
+each architecture to be precisely optimized for the MC it serves. To capture
+dependencies across MCs, prediction outputs from upstream models could be
+passed as features into downstream ones, enabling task forecasting that reflects
+the full production flow.
+
+
+Beyond architectural extensions, alternative ML paradigms can also be
+explored. The interdependencies between MCs suggest a graph-like structure,
+making Graph Neural Networks (GNNs) a promising choice for capturing the dynamics of the production line. Additionally, reinforcement learning
+offers a promising framework for learning task scheduling policies based on
+throughput-oriented reward signals. Instead of directly predicting operator
+tasks, a reinforcement learning model could learn to schedule them based on
+expected hourly throughput as a reward signal, gradually optimizing its policy
+through interaction with the simulated environment.
